@@ -1,0 +1,173 @@
+.about {
+	overflow-x: hidden;
+
+	&__photo {
+		@include flexy(row, space-between, inherit);
+		margin-bottom: 22px;
+
+		&-left,
+		&-right {
+			width: calc(50% - 19px);
+		}
+	}
+
+	&__info {
+		& p {
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 20px;
+			margin-bottom: 15px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__smear {
+		font-family: $constantine;
+		background: url(../images/about/smear.png) no-repeat;
+		background-size: 100% 111%;
+		margin: 0 -7%;
+		padding: 29px 0;
+
+		& span {
+			font-size: 19px;
+			// padding: 0 10%;
+			display: block;
+			padding: 0 11%;
+		}
+	}
+
+	&__wrapper {
+		margin-bottom: 31px;
+	}
+
+	&__content-shadow {
+		background: url(../images/about/shadow-mobile.png) no-repeat;
+		background-position-y: bottom;
+		padding-bottom: 49px;
+		background-size: 100%;
+	}
+
+	@media (min-width: 567px) {
+		&__content-shadow {
+			padding-bottom: 116px;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		&__wrapper {
+			@include flexy(row, space-between, inherit);
+		}
+
+		&__photo,
+		&__info {
+			width: calc(50% - 20px);
+		}
+
+		&__content-shadow {
+			font-family: $constantine;
+			background: url(../images/about/shadow-desktop.png) no-repeat;
+			background-position-y: bottom;
+			padding-bottom: 135px;
+			background-size: 100%;
+		}
+	}
+
+	@media (min-width: 1440px) {
+		& .title {
+			margin-bottom: 46px;
+		}
+
+		&__info p {
+			margin-bottom: 40px;
+		}
+	}
+
+	@media (min-width: 1920px) {
+		& .title {
+			margin-bottom: 68px;
+		}
+
+		&__photo-right {
+			@include flexy(column, space-between, inherit);
+			// width: 63%;
+			width: 32%;
+		}
+
+		&__photo-left {
+			width: 64%;
+		}
+
+		&__photo {
+			max-height: 611px;
+			width: 41%;
+		}
+
+		&__info {
+			width: 48%;
+			padding-top: 37px;
+		}
+
+		&__info p {
+			font-size: 22px;
+			line-height: 30px;
+			margin-bottom: 29px;
+		}
+
+		&__smear {
+			text-align: center;
+			// smear-desktop.png
+			background: url(../images/about/smear-desktop.png) no-repeat;
+			background-size: 95% 104%;
+			position: relative;
+			padding: 91px 0;
+
+			&::after {
+				position: absolute;
+				top: -82px;
+				right: 49px;
+				background: url(../images/about/paper.png) no-repeat;
+				content: '';
+				background-size: 100%;
+				width: 92%;
+				height: 109%;
+				z-index: -2;
+			}
+		}
+
+		&__smear span {
+			font-size: 24px;
+			line-height: 26px;
+			padding: 0 20%;
+		}
+
+		&__wrapper {
+			margin-bottom: 105px;
+		}
+
+		&__content-shadow {
+			font-size: 35px;
+			padding: 0 111px 219px 70px;
+		}
+	}
+}
+
+@media (min-width: 320px) {
+	.about {
+		&__info p {
+			font-size: 14px;
+		}
+
+		&__smear {
+			span {
+				font-size: 16px;
+			}
+		}
+
+        &__content-shadow{
+            font-size: 16px;
+            line-height: 1.5;
+        }
+	}
+}

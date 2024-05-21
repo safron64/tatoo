@@ -1,0 +1,91 @@
+.list {
+
+    &__content1 {
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    &--cards {
+
+        & li {
+            background-color: $purple-opacity;
+            padding: 32px 10px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            margin-bottom: 31px;
+
+            & .circle {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: $violet1;
+                width: 53px;
+                height: 53px;
+                border-radius: 50%
+
+            }
+
+            & p {
+                font-size: 18px;
+                line-height: 19px;
+            }
+
+            & .circle::after {
+                content: '1';
+                color: $white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &:nth-child(2) .circle::after {
+                content: '2';
+            }
+
+            &:nth-child(3) .circle::after {
+                content: '3';
+            }
+
+            &:nth-child(4) .circle::after {
+                content: '4';
+            }
+        }
+
+        @media (min-width: 1024px) {
+            & {
+                @include flexy(row, space-between, inherit);
+                flex-wrap: wrap;
+            }
+
+            & li {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (min-width: 1920px) {
+            & {
+                flex-wrap: nowrap;
+                margin-bottom: 104px;
+
+                & li {
+                    width: calc(25% - 48px);
+                    padding: 75px 10px 41px 10px;
+
+                    & .circle {
+                        font-size: 35px;
+                        width: 84px;
+                        height: 84px;
+                    }
+                }
+            }
+        }
+
+    }
+    @media(min-width: 320px){
+        &--cards li p{
+            font-size: 14px;
+        }
+    }
+}

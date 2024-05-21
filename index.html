@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tattoo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="src/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+
+<body>
+  <div class="modalBackground">
+    <div class="modalActive">
+      <div class="modalClose"></div>
+      <div class="modalWindow"></div>
+    </div>
+  </div>
+  <header class="header">
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="#first" class="nav__link link__decoration_increase nav__link_active js-header-close">Главная</a></li>
+        <li><a href="#about" class="nav__link link__decoration_increase js-header-close">Обо мне</a></li>
+        <li><a href="#portfolio" class="nav__link link__decoration_increase js-header-close">Портфолио</a></li>
+        <li><a href="#services" class="nav__link link__decoration_increase js-header-close">Услуги</a></li>
+        <li><a href="#memo" class="nav__link link__decoration_increase js-header-close">Памятки</a></li>
+        <li><a href="#reviews" class="nav__link link__decoration_increase js-header-close">Отзывы</a></li>
+        <li><a href="#contacts" class="nav__link link__decoration_increase js-header-close">Контакты</a></li>
+      </ul>
+      <ul class="nav__contacts">
+        <li><a class="contact-badge__item link__decoration_underscore" href="https://goo.gl/maps/AcZq1Pf4cUV465kx8" target="_blank"><img class="contact-badge__icon"
+              src="./src/images/header/location-pointer.svg" alt="найти меня в Google maps">
+            <span>Г. Казань, Айвазовского 10/54</span>
+          </a></li>
+      </ul>
+      <div class="contact-badge">
+        <a class="contact-badge__item js-header-close" href="https://goo.gl/maps/AcZq1Pf4cUV465kx8" target="_blank">
+          <p>Адрес студии:</p>
+          <p>Г. Казань, Айвазовского 10/54</p>
+          <img class="contact-badge__icon" src="./src/images/header/location-pointer.svg" alt="найти меня в Google maps">
+        </a>
+        <div class="contact-badge__item">
+          <p>График работы</p>
+          <p>Ежедневно 12:00 - 19:00</p>
+          <img class="contact-badge__icon" src="./src/images/header/clockIcon.svg" alt="schedule">
+        </div>
+        <div class="socials">
+          <a class="socails__item" href="https://t.me/dinasynthetica" target="_blank"><img src="./src/images/header/telegramm.svg" alt="связаться в телеграмм"></a>
+          <a class="socails__item" href="https://wa.me/+79600330101"><img src="./src/images/header/what'sUpIcon.svg" alt="what's up"></a>
+          <a class="socails__item" href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg=="><img src="./src/images/header/instagramm.svg" target="_blank" alt="Инстаграмм"></a>
+          <a class="socails__item" href="https://vk.com/dina_synthetica_tattoo" target="_blank"><img src="./src/images/header/vk-icon.svg" alt="Вконтакте"></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="first" class="first js-section">
+      <div class="first__wrapper">
+        <div class="first__top">
+          <img src="./src/images/first/tattoo-logo.svg" alt="Тату салон">
+          <p class="first__subtitle">В акварельном стиле</p>
+        </div>
+        <div class="girl">
+          <div class="girl__wrapper">
+            <h1>t<br>a<br>t<br>t<br>o<br>o</h1>
+            <div class="girl__border">
+              <picture>
+                <source type="image/png" srcset="./src/images/first/girl.png">
+                <source type="image/webp" srcset="./src/images/first/girl.webp">
+                <img src="./src/images/first/girl.png" alt="Тату салон">
+              </picture>
+            </div>
+          </div>
+          <div class="socials">
+            <a class="socails__item link__decoration_increase" href="https://t.me/dinasynthetica" target="_blank"><img src="./src/images/header/telegramm.svg" alt="telegramm"></a>
+            <a class="socails__item link__decoration_increase" href="https://wa.me/+79600330101" target="_blank"><img src="./src/images/header/what'sUpIcon.svg" alt="what's up"></a>
+            <a class="socails__item link__decoration_increase" href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" target="_blank"><img src="./src/images/header/instagramm.svg"
+                alt="Instagramm"></a>
+            <a class="socails__item link__decoration_increase" href="https://vk.com/dina_synthetica_tattoo" target="_blank"><img src="./src/images/header/vk-icon.svg" alt="Vk"></a>
+          </div>
+        </div>
+        <div class="first__left-side">
+          <picture class="first__img">
+            <source type="image/png" srcset="./src/images/first/tube.png">
+            <source type="image/webp" srcset="./src/images/first/tube.webp">
+            <img src="./src/images/first/tube.png" alt="Тату салон">
+          </picture>
+        </div>
+        <div class="first__check-in">
+          <p class="first__text">Для тех, кто уверен в&nbsp;своих решениях</p>
+          <a class="link link__decoration_checkIn" href="https://wa.me/+79600330101" target="_blank">Записаться на сеанс</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about js-section">
+      <div class="container">
+        <h2 class="title">
+          <span>ОБО МНЕ</span>
+        </h2>
+
+        <div class="about__wrapper">
+          <div class="about__photo">
+            <div class="about__photo-left">
+              <picture class="picture">
+                <source type="image/jpeg" srcset="./src/images/about/content1-mobile.jpg" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/about/content1-mobile.webp" media="(max-width: 1024px)">
+                <source type="image/jpeg" srcset="./src/images/about/content1-desktop.jpg" media="(max-width: 4000px)">
+                <source type="image/webp" srcset="./src/images/about/content1-desktop.webp" media="(max-width: 4000px)">
+                <img src="./src/images/about/content1-desktop.jpg" alt="Обо мне">
+              </picture>
+            </div>
+            <div class="about__photo-right">
+              <picture class="picture">
+                <source type="image/jpeg" srcset="./src/images/about/content2-mobile.jpg" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/about/content2-mobile.webp" media="(max-width: 1024px)">
+                <source type="image/jpeg" srcset="./src/images/about/content2-desktop.jpg" media="(max-width: 4000px)">
+                <source type="image/webp" srcset="./src/images/about/content2-desktop.webp" media="(max-width: 4000px)">
+                <img src="./src/images/about/content2-desktop.jpg" alt="Обо мне">
+              </picture>
+
+              <picture class="picture picture--desktop">
+                <source type="image/jpeg" srcset="./src/images/about/content3-desktop.jpg" media="(max-width: 4000px)">
+                <source type="image/webp" srcset="./src/images/about/content3-desktop.webp" media="(max-width: 4000px)">
+                <img src="./src/images/about/content3-desktop.jpg" alt="Обо мне">
+              </picture>
+            </div>
+          </div>
+          <div class="about__info">
+            <p>Привет! Меня зовут Дина&nbsp;&mdash; я&nbsp;тату мастер</p>
+            <p>В&nbsp;данной сфере 5&nbsp;лет и&nbsp;за&nbsp;моей спиной больше 500 сеансов разной сложности</p>
+            <p>Работаю в&nbsp;авторском стиле&nbsp;&mdash; <strong>акварель, ботаническая тематика</strong></p>
+            <p>Эскизы рисую индивидуально&nbsp;&mdash; бесплатно перед сеансом, под запрос клиента, не&nbsp;повторяю
+              ни&nbsp;свои, ни&nbsp;чужие работы</p>
+            <div class="about__smear">
+              <span>Татуировка&nbsp;&mdash; это любовь к&nbsp;себе в&nbsp;новом проявлении</span>
+            </div>
+          </div>
+        </div>
+
+        <ul class="list list--cards">
+          <li>
+            <div class="circle"></div>
+            <p class="list__content1">Набор для заживления</p>
+            <p class="list__content2">Пленка и&nbsp;мазь или заживляющая пленка</p>
+          </li>
+          <li>
+            <div class="circle"></div>
+            <p class="list__content1">Бесплатный эскиз</p>
+            <p class="list__content2">Рисую и&nbsp;показываю перед сеансом</p>
+          </li>
+          <li>
+            <div class="circle"></div>
+            <p class="list__content1">Перекрытие старых тату</p>
+            <p class="list__content2">Перекрою твои шрамы и&nbsp;неудачное тату</p>
+          </li>
+          <li>
+            <div class="circle"></div>
+            <p class="list__content1">Уютная атмосфера</p>
+            <p class="list__content2">Душевные разговоры за&nbsp;чашечкой чая</p>
+          </li>
+        </ul>
+
+        <p class="about__content-shadow text-center">Временных татуировок не&nbsp;существует, поэтому эта история только
+          для тех, кто уверен в&nbsp;своих решениях и&nbsp;готов носить рисунок
+          на&nbsp;своем теле всю жизнь</p>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio js-section">
+      <div class="container">
+        <div class="wrapper-title">
+          <h2 class="title">
+            <span>ПОРТФОЛИО</span>
+          </h2>
+        </div>
+
+        <div class="portfolio__wrapper">
+          <picture data-modal class="picture picture__portfolio">
+            <source type="image/webp" srcset="./src/images/portfolio/content1.webp" media="(max-width: 600px)" sizes="80vw">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content1.jpg" media="(max-width: 600px)" sizes="80vw">
+            <img src="./src/images/portfolio/content1.jpg" alt="Портфолио">
+          </picture>
+          <picture data-modal class="picture">
+            <source type="image/webp" srcset="./src/images/portfolio/content2.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content2.jpg" media="(max-width: 1024px)">
+            <img src="./src/images/portfolio/content2.jpg" alt="Портфолио">
+          </picture>
+
+          <picture data-modal class="picture">
+            <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)">
+            <img src="./src/images/portfolio/content3.jpg" alt="Портфолио">
+          </picture>
+
+          <picture data-modal class="picture picture--desktop">
+            <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
+            <source type="image/webp" srcset="./src/images/portfolio/content4-desktop.webp" media="(max-width: 4000px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content4-desktop.jpg" media="(max-width: 400px)">
+            <img src="./src/images/portfolio/content4-desktop.jpg" alt="Портфолио">
+          </picture>
+
+          <picture data-modal class="picture picture--desktop">
+            <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
+            <source type="image/webp" srcset="./src/images/portfolio/content5-desktop.webp" media="(max-width: 4000px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content5-desktop.jpg" media="(max-width: 400px)">
+            <img src="./src/images/portfolio/content5-desktop.jpg" alt="Портфолио">
+          </picture>
+
+          <picture data-modal class="picture picture--desktop">
+            <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
+            <source type="image/webp" srcset="./src/images/portfolio/content6-desktop.webp" media="(max-width: 4000px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content6-desktop.jpg" media="(max-width: 400px)">
+            <img src="./src/images/portfolio/content6-desktop.jpg" alt="Портфолио">
+          </picture>
+
+          <picture data-modal class="picture picture--desktop">
+            <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
+            <source type="image/webp" srcset="./src/images/portfolio/content7-desktop.webp" media="(max-width: 4000px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content7-desktop.jpg" media="(max-width: 400px)">
+            <img src="./src/images/portfolio/content7-desktop.jpg" alt="Портфолио">
+          </picture>
+
+          <picture data-modal class="picture picture--desktop">
+            <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
+            <source type="image/webp" srcset="./src/images/portfolio/content8-desktop.webp" media="(max-width: 4000px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content8-desktop.jpg" media="(max-width: 400px)">
+            <img src="./src/images/portfolio/content8-desktop.jpg" alt="Портфолио">
+          </picture>
+
+          <picture data-modal class="picture picture--desktop">
+            <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
+            <source type="image/webp" srcset="./src/images/portfolio/content9-desktop.webp" media="(max-width: 4000px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content9-desktop.jpg" media="(max-width: 400px)">
+            <img src="./src/images/portfolio/content9-desktop.jpg" alt="Портфолио">
+          </picture>
+
+          <picture data-modal class="picture picture--desktop">
+            <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
+            <source type="image/webp" srcset="./src/images/portfolio/content10-desktop.webp" media="(max-width: 4000px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content10-desktop.jpg" media="(max-width: 400px)">
+            <img src="./src/images/portfolio/content10-desktop.jpg" alt="Портфолио">
+          </picture>
+
+          <picture data-modal class="picture">
+            <source type="image/webp" srcset="./src/images/portfolio/content11.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content11.jpg" media="(max-width: 1024px)">
+            <img src="./src/images/portfolio/content11.jpg" alt="Портфолио">
+          </picture>
+
+          <picture data-modal class="picture">
+            <source type="image/webp" srcset="./src/images/portfolio/content12.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content12.jpg" media="(max-width: 1024px)">
+            <img src="./src/images/portfolio/content12.jpg" alt="Портфолио">
+          </picture>
+
+          <picture data-modal class="picture">
+            <source type="image/webp" srcset="./src/images/portfolio/content13.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content13.jpg" media="(max-width: 1024px)">
+            <img src="./src/images/portfolio/content13.jpg" alt="Портфолио">
+          </picture>
+
+          <picture data-modal class="picture">
+            <source type="image/webp" srcset="./src/images/portfolio/content14.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content14.jpg" media="(max-width: 1024px)">
+            <img src="./src/images/portfolio/content14.jpg" alt="Портфолио">
+          </picture>
+
+          <picture data-modal class="picture">
+            <source type="image/webp" srcset="./src/images/portfolio/content15.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content15.jpg" media="(max-width: 1024px)">
+            <img src="./src/images/portfolio/content15.jpg" alt="Портфолио">
+          </picture>
+
+          <picture data-modal class="picture picture--desktop">
+            <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
+            <source type="image/webp" srcset="./src/images/portfolio/content16-desktop.webp" media="(max-width: 4000px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content16-desktop.jpg" media="(max-width: 400px)">
+            <img src="./src/images/portfolio/content16-desktop.jpg" alt="Портфолио">
+          </picture>
+        </div>
+
+        <div class="portfolio__flex">
+          <div class="portfolio__information">
+            <p>Перекрытие шрамов и&nbsp;неудачных тату</p>
+            <span>Перекрытия&nbsp;&mdash; это всегда непросто:</span>
+            <ul class="list portfolio__list">
+              <li><span>ограниченная цветовая палитра, так как светлые и&nbsp;теплые оттенки не&nbsp;перекрывают
+                  темные</span></li>
+              <li><span>эскиз должен скрыть старую татуировку полностью, поэтому он&nbsp;обычно больше
+                  по&nbsp;размеру</span></li>
+              <li><span>темные части старой татуировки останутся там, где они были, и&nbsp;нужно под них
+                  подстраиваться</span></li>
+            </ul>
+
+            <p>
+              Выпуклость никуда не&nbsp;пропадет и&nbsp;ее&nbsp;нужно прятать рисунком, поэтому если их&nbsp;закрасить
+              просто так, они станут заметнее на&nbsp;фоне ровной кожи
+            </p>
+
+            <p>Любые шрамы перекрывать нужно очень осторожно</p>
+
+
+          </div>
+          <!-- </div> -->
+
+
+          <div class="swiper portfolio__swiper js-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide portfolio__slides">
+                <!-- <div class=""> -->
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before1.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before1.webp" media="(max-width: 1024px)">
+                  <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
+                  <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 2400px)"> -->
+                  <img src="./src/images/portfolio/before-after/before1.jpg" alt="Работа до">
+                </picture>
+
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after1.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after1.webp" media="(max-width: 1024px)">
+                  <img src="./src/images/portfolio/before-after/after1.jpg" alt="Работа после">
+                </picture>
+                <!-- </div> -->
+              </div>
+
+              <div class="swiper-slide portfolio__slides">
+
+                <!-- <div class=""> -->
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before2.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before2.webp" media="(max-width: 1024px)">
+                  <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
+                  <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 2400px)"> -->
+                  <img src="./src/images/portfolio/before-after/before2.jpg" alt="Работа до">
+                </picture>
+
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after2.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after2.webp" media="(max-width: 1024px)">
+                  <img src="./src/images/portfolio/before-after/after2.jpg" alt="Работа после">
+                </picture>
+                <!-- </div> -->
+              </div>
+
+              <div class="swiper-slide portfolio__slides">
+                <!-- <div class=""> -->
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before3.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before3.webp" media="(max-width: 1024px)">
+                  <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
+                  <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 2400px)"> -->
+                  <img src="./src/images/portfolio/before-after/before3.jpg" alt="Работа до">
+                </picture>
+
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after3.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after3.webp" media="(max-width: 1024px)">
+                  <img src="./src/images/portfolio/before-after/after3.jpg" alt="Работа после">
+                </picture>
+                <!-- </div> -->
+              </div>
+
+              <div class="swiper-slide portfolio__slides">
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before4.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before4.webp" media="(max-width: 1024px)">
+                  <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
+                  <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 2400px)"> -->
+                  <img src="./src/images/portfolio/before-after/before4.jpg" alt="Работа до">
+                </picture>
+
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after4.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after4.webp" media="(max-width: 1024px)">
+                  <img src="./src/images/portfolio/before-after/after4.jpg" alt="Работа после">
+                </picture>
+              </div>
+
+              <div class="swiper-slide portfolio__slides">
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before5.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before5.webp" media="(max-width: 1024px)">
+                  <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
+                  <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 2400px)"> -->
+                  <img src="./src/images/portfolio/before-after/before5.jpg" alt="Работа до">
+                </picture>
+
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after5.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after5.webp" media="(max-width: 1024px)">
+                  <img src="./src/images/portfolio/before-after/after5.jpg" alt="Работа после">
+                </picture>
+              </div>
+
+              <div class="swiper-slide portfolio__slides">
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before6.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before6.webp" media="(max-width: 1024px)">
+                  <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
+                  <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 2400px)"> -->
+                  <img src="./src/images/portfolio/before-after/before6.jpg" alt="Работа до">
+                </picture>
+
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after6.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after6.webp" media="(max-width: 1024px)">
+                  <img src="./src/images/portfolio/before-after/after6.jpg" alt="Работа после">
+                </picture>
+              </div>
+            </div>
+
+            <div class="swiper-button-prev portfolio__swiper-button-prev"></div>
+            <div class="swiper-button-next portfolio__swiper-button-next"></div>
+          </div>
+          <!-- </div> -->
+
+          <div class="portfolio__consultation text-center">
+            <p>Если у&nbsp;тебя есть&nbsp;то, что хочешь перекрыть&nbsp;&mdash; то&nbsp;тебе ко&nbsp;мне</p>
+            <p>Напиши мне и&nbsp;мы&nbsp;обсудим об&nbsp;этом&nbsp;&mdash; консультация бесплатно</p>
+
+            <a class="link text-center link__decoration_checkIn" href="https://wa.me/+79600330101" target="_blank">Записаться на сеанс</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services js-section">
+      <div class="wrapper-title">
+        <h2 class="title">
+          <span>Услуги</span>
+        </h2>
+      </div>
+      <p class="services__h2 text-center">Нажми на место, где хотите набить тату, чтобы узнать цену</p>
+      <div class="services__main">
+        <div class="services__main__left-column text-center">
+          <p>Эта процедура — не из приятных, и она доставляет определенные сложности вне зависимости от пола и возраста
+            человека.
+            Существует так называемая карта боли, которая иллюстрирует самые болезненные и относительно неприятные
+            области для нанесения
+            рисунка.</p>
+          <div class="services__main__left-column__pain-points">
+            <picture>
+              <source media="(max-width:768px)" srcset="./src/images/services/anatomy-md.png">
+              <img src="./src/images/services/anatomy.png" alt="Болевые точки">
+            </picture>
+            <div class="pain-points__text">
+              <p>Наименее болезненно</p>
+              <p>Очень больно</p>
+            </div>
+          </div>
+        </div>
+        <div class="services__animation">
+          <div id="rotation"></div>
+          <a id="clavicle" class="btn-calc clavicle"></a>
+          <a id="ribs" class="btn-calc ribs"></a>
+          <a id="left-hand-top" class="btn-calc left-hand-top"></a>
+          <a id="left-hand-center" class="btn-calc left-hand-center"></a>
+          <a id="left-hand-bottom" class="btn-calc left-hand-bottom"></a>
+          <a id="right-hand-top" class="btn-calc right-hand-top"></a>
+          <a id="right-hand-center" class="btn-calc right-hand-center"></a>
+          <a id="right-hand-bottom" class="btn-calc right-hand-bottom"></a>
+          <a id="left-leg-top" class="btn-calc left-leg-top"></a>
+          <a id="left-leg-center" class="btn-calc left-leg-center"></a>
+          <a id="left-leg-bottom" class="btn-calc left-leg-bottom"></a>
+          <a id="right-leg-top" class="btn-calc right-leg-top"></a>
+          <a id="right-leg-center" class="btn-calc right-leg-center"></a>
+          <a id="right-leg-bottom" class="btn-calc right-leg-bottom"></a>
+          <a id="right-leg-profile-center" class="btn-calc right-leg-profile-center profile-right profile"></a>
+          <a id="right-leg-profile-bottom" class="btn-calc right-leg-profile-bottom profile-right profile"></a>
+          <a id="right-hand-profile-top" class="btn-calc right-hand-profile-top profile-right profile"></a>
+          <a id="right-hand-profile-center" class="btn-calc right-hand-profile-center profile-right profile"></a>
+          <a id="right-hand-profile-bottom" class="btn-calc right-hand-profile-bottom profile-right profile"></a>
+          <a id="right-stomach-profile" class="btn-calc right-stomach-profile profile-right profile"></a>
+          <a id="left-leg-profile-center" class="btn-calc left-leg-profile-center profile-left profile"></a>
+          <a id="left-leg-profile-bottom" class="btn-calc left-leg-profile-bottom profile-left profile"></a>
+          <a id="left-hand-profile-top" class="btn-calc left-hand-profile-top profile-left profile"></a>
+          <a id="left-hand-profile-center" class="btn-calc left-hand-profile-center profile-left profile"></a>
+          <a id="left-hand-profile-bottom" class="btn-calc left-hand-profile-bottom profile-left profile"></a>
+          <a id="left-stomach-profile" class="btn-calc left-stomach-profile profile-left profile"></a>
+          <div class="services__animation__footer">
+            <!--  <img src="./src/images/services/line.png" alt="Покрути"> -->
+            <form class="range text-center">
+              <input type="range" id="range" min="0" max="23" value="0">
+              <label class="services__h2" for="range">Покрути</label>
+            </form>
+          </div>
+        </div>
+        <div class="services__main__right-column">
+          <p>Восприимчивость различных участков неодинакова. На болезненность влияют разные факторы: плотность кожи,
+            количество нервных
+            окончаний в определенной области, удаленность от кости (если кость близко к коже, будет больно при нанесении
+            тату).
+          </p>
+          <p class="mt-18"><strong>Важно!</strong> Если вам становится нестерпимо больно, не надо дергаться и извиваться
+            под рукой мастера. Лучше всего прервать
+            сеанс и продолжить в следующий раз.
+          </p>
+          <p class="mt-36 mb-15 h2">Если знаешь размер и место тату, то смело записывайся</p>
+          <a class="link text-center link__decoration_checkIn" href="https://wa.me/+79600330101" target="_blank">Записаться на сеанс</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="memo" class="memo js-section">
+      <div class="container">
+
+        <h2 class="title"> <span>Памятки</span></h2>
+        <p class="memo__h2 text-center">Как поготовиться к сеансу?</p>
+
+        <ul class="list list--cards">
+          <li>
+            <div class="circle"></div>
+            <p class="list__content1">Отличное настроение</p>
+            <p class="list__content2">Подумать о хорошем и расслабиться</p>
+          </li>
+          <li>
+            <div class="circle"></div>
+            <p class="list__content1">Покушать</p>
+            <p class="list__content2">Перед сеансом быть сытым</p>
+          </li>
+          <li>
+            <div class="circle"></div>
+            <p class="list__content1">Выспаться</p>
+            <p class="list__content2">Чтобы организм не стрессовал</p>
+          </li>
+          <li>
+            <div class="circle"></div>
+            <p class="list__content1">Удобная одежда</p>
+            <p class="list__content2">Для вашего комфорта - любимая одежда</p>
+          </li>
+        </ul>
+        <p class="memo__desc">
+          Эти пункты нужны, чтобы наши базовые потребности были полностью закрыты и организм дополнительно не
+          стрессовал
+        </p>
+        <div class="memo__wrapper">
+
+          <div class="memo__separation">
+            <div class="memo__content">
+              <div class="memo__pluse-btn"></div>
+              <h3 class="memo__switch text-center">
+                Заживление татуировки
+              </h3>
+            </div>
+            <div class="memo__list">
+              <div class="memo__list-item">
+                <img src="./src/images/nums/1.svg" alt="1">
+                <div class="item-content">
+                  <h3>Активное заживление</h3>
+                  <p>В это время кожа в области татуировки
+                    краснеет, возникает припухлость, а самое главное -
+                    начинает выделяться вязкая бесцветная жидкость.
+                  </p>
+                  <p>Данный этап длится в среднем <strong>до 2 дней</strong>, бить
+                    тревогу не надо, это естественный физиологический
+                    процесс
+                  </p>
+                </div>
+              </div>
+              <div class="memo__list-item">
+                <img src="./src/images/nums/2.svg" alt="1">
+                <div class="item-content">
+                  <h3>Регенерация</h3>
+                  <p>В этот период опухоль спадает, сукровица
+                    перестает выделятся, кожа подсыхает и стягивается.
+                  </p>
+                  <p>Длительность этого этапа – <strong>до 6 дней</strong>
+                  </p>
+                </div>
+              </div>
+              <div class="memo__list-item">
+                <img src="./src/images/nums/3.svg" alt="1">
+                <div class="item-content">
+                  <h3>Восстановление</h3>
+                  <p>В этот период кожа начинает шелушиться,
+                    а “корочки” постепенно отпадать.
+                    Область тату может достаточно ощутимо зудеть
+                  </p>
+                  <p>Этап длится от <strong>7 до 14 дней</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="memo__rules">
+              <p>До заживления - нельзя ходить в сауны, бани,
+                купаться в бассейне, море, водоемах,
+                заниматься активным спортом - 7-10 дней примерно</p>
+              <p>При посещении пляжа использовать солнцезащитные средства</p>
+              <p>На месте татуировки противопоказана лазерная и фотоэпиляция</p>
+            </div>
+          </div>
+
+          <div class="memo__separation">
+            <div class="memo__content">
+              <div class="memo__pluse-btn"></div>
+              <h3 class="memo__switch text-center">
+                Уход за татуировкой
+              </h3>
+            </div>
+            <div class="memo__list">
+              <div class="memo__list-item">
+                <img src="./src/images/nums/1.svg" alt="1">
+                <div class="item-content">
+                  <p>Небольшие татуировки <strong>(до 15 см)</strong> удобно заживлять
+                    с помощью <strong>специальной плёнки.</strong>
+                  </p>
+                  <p>Ходить с этой пленкой тебе нужно <strong>6-7 дней.</strong>
+                  </p>
+                  <p>Под пленкой будет скапливаться жидкость. <br> <strong>Не прокалывай плёнку</strong>,
+                    не сливай эту жидкость и старайся не носить одежду,
+                    которая может давить на плёнку. </p>
+                  <p>После того, как <strong>снимешь плёнку</strong>, тщательно промой татуировку
+                    с мылом и протяжении недели следует <strong>мазать мазью или увлажняющим кремом</strong>. </p>
+                </div>
+              </div>
+              <div class="memo__list-item">
+                <img src="./src/images/nums/2.svg" alt="1">
+                <div class="item-content">
+
+                  <p>Большие татуировки <strong>(от 15 см)</strong> удобно заживлять с помощью <strong>пелёнки</strong>.
+                  </p>
+                  <p>Первый раз меняй компресс <strong>перед сном</strong> в день сеанса
+                    - нужно промыть теплой водой с кусковым мылом </strong>
+                  </p>
+                  <p>После этого необходимо дать подсохнуть и намазать тонким
+                    слоем мази. И снова надеть пеленку.</p>
+                  <p>На второй день днем можно ходить без пеленки - только не забывайте наносить
+                    мазь, в течение недели, но на ночь всё равно заматывайте пеленкой.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="memo__personal">
+          <h3 class="text-center">Личные памятки</h3>
+          <div>
+            <img src="./src/images/memo/layer.svg" alt="фон">
+            <a target="_blank" href="https://vk.com/@dina_synthetica_tattoo-poetapnyi-razbor-perekrytiya-staroi-tatuirovki">Подробный
+              разбор перекрытия старой зашрамированной татуировки</a>
+          </div>
+          <div>
+            <img src="./src/images/memo/layer.svg" alt="фон">
+            <a target="_blank" href="https://vk.com/@dina_synthetica_tattoo-pochemu-tatuirovki-bledneut-i-pro-korrekciu">Почему тату
+              бледнеет?</a>
+          </div>
+          <div>
+            <img src="./src/images/memo/layer.svg" alt="фон" />
+            <a target="_blank" href="https://vk.com/wall-211069230_846">Как готовиться твой эскиз?</a>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+
+    <section id="reviews" class="reviews js-section">
+      <div class="container">
+        <h2 class="title">
+          <span>ОТЗЫВЫ</span>
+        </h2>
+        <div class="swiper js-swiper-reviews" data-mobile="false">
+          <div class="swiper-wrapper">
+            <!--в стилях буду показывать 1й слайд на пк, а 2й и 3й на планшетах и мобильных устройствах-->
+
+            <div class="swiper-slide pc-slide">
+              <picture class="picture">
+                <source type="image/webp" srcset="./src/images/reviews/slider-pc-first.webp" media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/slider-pc-first.png" media="(max-width: 4000px)">
+                <img src="./src/images/reviews/slider-pc-first.png" alt="Отзыв клиента">
+              </picture>
+            </div>
+
+            <div class="swiper-slide mob-slide">
+              <picture class="picture">
+                <source type="image/webp" srcset="./src/images/reviews/content1-mobile.webp" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content1-mobile.jpg" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content1-desktop.webp" media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/content1-desktop.jpg" media="(max-width: 4000px)">
+                <img src="./src/images/reviews/content1-desktop.jpg" alt="Отзыв клиента">
+              </picture>
+            </div>
+
+            <div class="swiper-slide mob-slide">
+              <picture class="picture">
+                <source type="image/webp" srcset="./src/images/reviews/content2-mobile.webp" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content2-mobile.jpg" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content2-desktop.webp" media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/content2-desktop.jpg" media="(max-width: 4000px)">
+                <img src="./src/images/reviews/content2-desktop.jpg" alt="Отзыв клиента">
+              </picture>
+            </div>
+
+            <div class="swiper-slide">
+              <picture class="picture">
+                <source type="image/webp" srcset="./src/images/reviews/content3-mobile.webp" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content3-mobile.jpg" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content3-desktop.webp" media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/content3-desktop.jpg" media="(max-width: 4000px)">
+                <img src="./src/images/reviews/content3-desktop.jpg" alt="Отзыв клиента">
+              </picture>
+            </div>
+
+            <div class="swiper-slide">
+              <picture class="picture">
+                <source type="image/webp" srcset="./src/images/reviews/content4-mobile.webp" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content4-mobile.jpg" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content4-desktop.webp" media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/content4-desktop.jpg" media="(max-width: 4000px)">
+                <img src="./src/images/reviews/content4-desktop.jpg" alt="Отзыв клиента">
+              </picture>
+            </div>
+
+            <div class="swiper-slide">
+              <picture class="picture">
+                <source type="image/webp" srcset="./src/images/reviews/content5-mobile.webp" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content5-mobile.jpg" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content5-desktop.webp" media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/content5-desktop.jpg" media="(max-width: 4000px)">
+                <img src="./src/images/reviews/content5-desktop.jpg" alt="Отзыв клиента">
+              </picture>
+            </div>
+
+            <div class="swiper-slide">
+              <picture class="picture">
+                <source type="image/webp" srcset="./src/images/reviews/content6-desktop.webp" media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/content6-desktop.jpg" media="(max-width: 4000px)">
+                <img src="./src/images/reviews/content6-desktop.jpg" alt="Отзыв клиента">
+              </picture>
+            </div>
+
+          </div>
+          <div class="swiper-button-prev portfolio__swiper-button-prev"></div>
+          <div class="swiper-button-next portfolio__swiper-button-next"></div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="contacts js-section">
+      <div class="container">
+        <h2 class="title">
+          <span>
+            КОНТАКТЫ
+          </span>
+        </h2>
+        <img class="contacts__img-title" src="/src/images/contacts/content2.png" alt="">
+        <div class="contacts__wrapper">
+
+          <div class="contacts__info">
+            <div class="contact-badge">
+              <a class="contact-badge__item link__decoration_underscore" href="https://goo.gl/maps/AcZq1Pf4cUV465kx8" target="_blank">
+                <p>Адрес студии:</p>
+                <p>Г. Казань, Айвазовского 10/54</p>
+                <img class="contact-badge__icon" src="./src/images/header/location-pointer.svg" alt="найти меня в Google maps">
+              </a>
+              <div class="contact-badge__item">
+                <p>График работы</p>
+                <p>Ежедневно 12:00 - 19:00</p>
+                <img class="contact-badge__icon" src="./src/images/header/clockIcon.svg" alt="schedule">
+              </div>
+
+              <div class="socials">
+                <a class="socails__item link__decoration_increase" href="https://t.me/dinasynthetica" target="_blank"><img src="./src/images/header/telegramm.svg" alt="telegramm"></a>
+                <a class="socails__item link__decoration_increase" href="https://wa.me/+79600330101" target="_blank"><img src="./src/images/header/what'sUpIcon.svg" alt="what's up"></a>
+                <a class="socails__item link__decoration_increase" href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" target="_blank"><img src="./src/images/header/instagramm.svg"
+                    alt="Instagramm"></a>
+                <a class="socails__item link__decoration_increase" href="https://vk.com/dina_synthetica_tattoo" target="_blank"><img src="./src/images/header/vk-icon.svg" alt="Vk"></a>
+              </div>
+
+            </div>
+          </div>
+          <div class="contacts__atelier">
+            <div class="contacts__atelier-title">Студия</div>
+            <img src="./src/images/contacts/content.png" class="contacts__img"></img>
+            <img src="./src/images/contacts/content.png" class="contacts__img"></img>
+            <div class="contacts__atelier-video">
+              <iframe src="https://drive.google.com/file/d/1bB4DJhQxHCA_foYYZQKaoZ08rE-I4RMy/preview" allowtransparency allow="autoplay" sandbox="allow-same-origin allow-scripts"></iframe>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- footer -->
+
+  <footer class="footer">
+    <div class="container">
+      <img class="footer__bg-desktop" src="/src/images/footer/bg.png" alt="">
+      <div class="footer__inner">
+        <div class="contact-badge">
+          <a class="contact-badge__item link__decoration_underscore" href="https://goo.gl/maps/AcZq1Pf4cUV465kx8" target="_blank">
+            <p>Адрес студии:</p>
+            <p>Г. Казань, Айвазовского 10/54</p>
+            <img class="contact-badge__icon" src="./src/images/header/location-pointer.svg" alt="найти меня в Google maps">
+          </a>
+          <div class="contact-badge__item">
+            <p>График работы</p>
+            <p>Ежедневно 12:00 - 19:00</p>
+            <img class="contact-badge__icon" src="./src/images/header/clockIcon.svg" alt="schedule">
+          </div>
+          <div class="socials">
+            <a class="socails__item link__decoration_increase" href="https://t.me/dinasynthetica" target="_blank"><img src="./src/images/header/telegramm.svg" alt="связаться в телеграмм"></a>
+            <a class="socails__item link__decoration_increase" href="https://wa.me/+79600330101" target="_blank"><img src="./src/images/header/what'sUpIcon.svg" alt="what's up"></a>
+            <a class="socails__item link__decoration_increase" href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" target="_blank"><img src="./src/images/header/instagramm.svg"
+                target="_blank" alt="Инстаграмм"></a>
+            <a class="socails__item link__decoration_increase" href="https://vk.com/dina_synthetica_tattoo" target="_blank"><img src="./src/images/header/vk-icon.svg" alt="Вконтакте"></a>
+          </div>
+
+        </div>
+        <ul class="footer__nav">
+          <li class="link__decoration_increase"><a href="#first">Главная</a> </li>
+          <li class="link__decoration_increase"><a href="#about">О&nbsp;себе</a> </li>
+          <li class="link__decoration_increase"><a href="#portfolio">Портфолио</a> </li>
+          <li class="link__decoration_increase"><a href="#services">Услуги</a> </li>
+          <li class="link__decoration_increase"><a href="#memo">Памятки</a></li>
+          <li class="link__decoration_increase"><a href="#reviews">Отзывы</a> </li>
+          <li class="link__decoration_increase"><a href="#contacts">Контакты</a> </li>
+        </ul>
+
+        <div class="footer__desktop">
+
+          <div class="socials">
+            <a class="socails__item link__decoration_increase" href="https://t.me/dinasynthetica" target="_blank"><img src="./src/images/header/telegramm.svg" alt="связаться в телеграмм"></a>
+            <a class="socails__item link__decoration_increase" href="https://wa.me/+79600330101" target="_blank"><img src="./src/images/header/what'sUpIcon.svg" alt="what's up"></a>
+            <a class="socails__item link__decoration_increase" href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" target="_blank"><img src="./src/images/header/instagramm.svg"
+                target="_blank" alt="Инстаграмм"></a>
+            <a class="socails__item link__decoration_increase" href="https://vk.com/dina_synthetica_tattoo" target="_blank"><img src="./src/images/header/vk-icon.svg" alt="Вконтакте"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- <div class="popup">
+    <div class="popup__inner"></div>
+  </div> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./src/script/jquery-1.12.0.min.js"></script>
+  <script src="./src/script/state.js"></script>
+  <script src="./src/script/renderCalcBlock.js"></script>
+  <script src="./src/script/data.js"></script>
+  <script src="./src/script/image360.jquery.js"></script>
+  <script src="./src/script/index.js"></script>
+  <script src="./src/script/modal.js"></script>
+  <script src="./src/script/memo.js"></script>
+
+
+</body>
+
+</html>

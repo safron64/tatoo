@@ -1,0 +1,127 @@
+.picture {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+
+    & img {
+        object-fit: cover;
+        vertical-align: middle;
+    }
+
+    .portfolio__wrapper & {
+        width: calc(20% - 5px);
+        height: 130px;
+        cursor: pointer;
+
+        &--desktop {
+            display: none;
+        }
+    }
+
+    .portfolio__wrapper &:nth-child(-1n+3) {
+        width: calc(33% - 10px);
+        height: 137px;
+        margin-bottom: 6px;
+    }
+
+    &--portfolio {
+        //width: calc(50% - 20px);
+        // height: auto;
+        padding: 0px 3px;
+        height: 49vh;
+
+        img {
+            object-fit: contain;
+        }
+    }
+
+    .portfolio__wrapper .portfolio__slides & {
+        height: 170px;
+        width: calc(50% - 10px);
+    }
+
+    .about__photo-right &--desktop {
+        display: none;
+    }
+
+    .reviews & {
+        height: 396px;
+
+        & img {
+            object-fit: contain;
+        }
+    }
+
+    @media (min-width: 768px) {
+        // .portfolio__wrapper .portfolio__slides & {
+        //     height: 400px;
+        // }
+
+        &--portfolio {
+            //height: 468px;
+        }
+
+        .portfolio__wrapper &,
+        .portfolio__wrapper &:nth-child(-1n+3) {
+            height: 275px;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .portfolio__wrapper & {
+            &--desktop {
+                display: block;
+            }
+        }
+
+        // .portfolio__wrapper .portfolio__slides & {
+        //     width: calc(50% - 10px);
+        // }
+
+        .portfolio__wrapper &,
+        .portfolio__wrapper &:nth-child(-1n+3),
+        .portfolio__wrapper &:nth-child(-1n+8) {
+            width: calc(12.5% - 17px);
+            height: 257px;
+        }
+
+        .portfolio__wrapper &:nth-last-child(-1n+8) {
+            height: 360px;
+        }
+
+        // .portfolio__wrapper .portfolio__slides & {
+        //     width: calc(50% - 10px);
+        //     height: 404px;
+        // }
+
+        &--portfolio {
+            //height: 415px;
+        }
+
+        .portfolio__wrapper &:nth-child(-1n+8) {
+            margin-bottom: 31px;
+        }
+
+        // .about__photo-left &--desktop {
+
+        // }
+    }
+
+    @media (min-width: 1920px) {
+        .about__photo-right &--desktop {
+            display: block;
+        }
+
+        .about__photo-right & {
+            height: calc(50% - 1px);
+
+            & img {
+                object-fit: contain;
+            }
+        }
+
+        .about__photo-left & {
+            max-height: 611px;
+        }
+    }
+}

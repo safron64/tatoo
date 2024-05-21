@@ -1,0 +1,41 @@
+.contact-badge {
+    @include flexy(column, space-between, flex-start);
+    gap: 10px;
+
+    &__item {
+        padding-left: 20px;
+        position: relative;
+        color: #22082b;
+        font-family: Manrope;
+
+        img {
+            content: "";
+            position: absolute;
+            top: 10%;
+            left: 0%;
+            width: 16px;
+            height: 16px;
+        }
+
+        p:first-child {
+            @include fonty(14px, 600, 19px);
+        }
+
+        p:nth-child(2) {
+            @include fonty(12px, 400, 14px);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .header .contact-badge {
+        &__item {
+            @include flexy(row, flex-start);
+
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}

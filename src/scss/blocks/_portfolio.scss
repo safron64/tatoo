@@ -1,0 +1,302 @@
+.portfolio {
+	background: url(../../../src/images/portfolio/bg.png) no-repeat;
+	padding-top: 64px;
+	background-size: 100%;
+	margin-bottom: 32px;
+	position: relative;
+
+	.wrapper-title {
+
+		//пишу это ублюдочным способом: тот кто это верстал потом напиши норм, пока работает и ебись оно конем
+		h2 {
+
+			&::after,
+			&::before {
+				width: 26%;
+			}
+
+			span {
+				padding: 0 0;
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__information {
+		font-weight: 600;
+		padding-top: 22px;
+
+		& p {
+			font-size: 17px;
+			line-height: 19px;
+			margin-bottom: 9px;
+		}
+
+		& p:nth-last-child(2) {
+			font-weight: 400;
+		}
+
+		& p:last-child {
+			font-weight: 600;
+		}
+
+		& span {
+			font-size: 15px;
+			line-height: 14px;
+			margin-bottom: 16px;
+			display: inline-block;
+		}
+	}
+
+	&__list {
+		margin-bottom: 15px;
+
+		& li {
+			position: relative;
+			padding-left: 40px;
+
+			&::after {
+				content: '';
+				background-color: #a289aa;
+				width: 21px;
+				height: 21px;
+				border-radius: 50%;
+				display: inline-block;
+				position: absolute;
+				top: 50%;
+				left: 5px;
+				transform: translateY(-50%);
+			}
+
+			& span {
+				font-weight: 400;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__swiper {
+		padding-bottom: 40px;
+		margin-bottom: 20px;
+	}
+
+	&__slides {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__swiper-button-prev,
+	&__swiper-button-next {
+		top: auto;
+		width: 37px;
+		height: 37px;
+		bottom: 0;
+		background-size: 37px 37px;
+		left: calc(50% - 54px);
+	}
+
+
+	&__swiper-button-prev {
+		background: url('../icon/left.svg') no-repeat;
+		left: calc(50% - 54px);
+	}
+
+	&__swiper-button-next {
+		background: url('../icon/right.svg') no-repeat;
+		left: auto;
+		right: calc(50% - 54px);
+	}
+
+	&__swiper-button-prev::after,
+	&__swiper-button-next::after {
+		content: '';
+	}
+
+	&__consultation {
+		& p {
+			margin-bottom: 19px;
+		}
+
+		& p:nth-child(2) {
+			margin-bottom: 42px;
+		}
+	}
+
+	@media (min-width: 1280px) {
+		&__consultation p {
+			font-size: 25px;
+		}
+
+		&__consultation .link {
+			margin: 0;
+			align-self: start;
+			padding: 26px 50px;
+		}
+
+		&__consultation p:nth-child(2) {
+			margin-bottom: 26px;
+		}
+
+		& {
+			margin-bottom: 192px;
+			background: url(../../../src/images/portfolio/bg-desktop.png) no-repeat;
+		}
+
+		&__flex {
+			padding-top: 119px;
+			@include flexy(row, space-between, start);
+			position: relative;
+		}
+
+		& .title {
+			margin-bottom: 37px;
+		}
+
+		&__swiper {
+			// width: calc(34% - 10px);
+			width: 36%;
+			margin-left: 0;
+			order: 1;
+			padding-top: 30px;
+		}
+
+		&__information {
+			// width: calc(66% - 10px);
+			width: 60%;
+			order: 2;
+			padding-top: 4px;
+		}
+
+		&__consultation {
+			position: absolute;
+			right: 50%;
+			transform: translateX(10px);
+			bottom: 0;
+			width: 50%;
+			// transform: translate(80%, 17%);
+			transform: translate(80%, 52%);
+			text-align: left;
+			align-items: start;
+
+			& p:first-child {
+				margin-bottom: 8px;
+			}
+
+			// @include flexy(column, center, center);
+
+			& .link {
+				max-width: 451px;
+				align-self: center;
+				margin-left: -16px;
+			}
+		}
+
+		&__swiper-button-prev,
+		&__swiper-button-next {
+			// top: auto;
+			width: 84px;
+			height: 84px;
+			background-size: 84px 84px;
+			left: calc(50% - 99px);
+		}
+
+		&__swiper-button-next {
+			left: auto;
+			right: calc(50% - 99px);
+		}
+
+		&__information p {
+			font-size: 25px;
+			margin-bottom: 40px;
+		}
+
+		&__information span {
+			font-size: 22px;
+			line-height: 22px;
+			margin-bottom: 35px;
+		}
+
+		&__list {
+			margin-bottom: 33px;
+		}
+
+		&__list li {
+			margin-bottom: 16px;
+			padding-left: 44px;
+
+			&::after {
+				width: 30px;
+				height: 30px;
+				left: 0px;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&__information p:nth-last-child(2) {
+			font-size: 22px;
+			line-height: 28px;
+			margin-bottom: 21px;
+		}
+
+		&__information p:last-child {
+			font-size: 24px;
+		}
+	}
+
+	@media (min-width: 1920px) {
+		& {
+			margin-bottom: 140px;
+
+			&__consultation {
+				transform: translate(80%, 16%);
+			}
+		}
+	}
+}
+
+@media (min-width: 320px) {
+	.portfolio {
+		&__information {
+			p {
+				font-size: 16px;
+			}
+
+			span {
+				font-size: 14px;
+			}
+		}
+
+		&__consultation {
+			font-size: 16px;
+			line-height: 1.5;
+		}
+	}
+}
+
+@media (min-width: 475px) {
+
+	//тоже написано ублюдочно - как будет время - надонаписать норм, пока работает и ебись оно конем
+	.portfolio {
+		.wrapper-title {
+			h2 {
+
+				&::after,
+				&::before {
+					width: 30%;
+				}
+			}
+		}
+
+		&__swiper {
+			padding-bottom: 120px;
+		}
+	}
+}

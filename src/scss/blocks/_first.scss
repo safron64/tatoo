@@ -1,0 +1,169 @@
+.first {
+    @include centry(91%);
+    padding: 20px 0;
+    overflow-x: hidden;
+
+    &__top {
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &__subtitle {
+        @include fonty(16px, 500, 21px);
+        text-align: center;
+    }
+
+    .girl {
+        margin: 0 auto;
+        padding-top: calc(25px + 35 * ((100vw - 320px) / 768));
+        padding-bottom: 6px;
+        @include flexy(row);
+        gap: 10px;
+        max-height: 755px;
+
+        &__wrapper {
+            @include flexy();
+            //position: relative;
+
+            picture {
+                width: 90%;
+                position: relative;
+                margin: -10% 0% 0% 10%;
+
+                img {
+                    vertical-align: middle;
+                }
+            }
+        }
+
+
+        h1 {
+            font-family: 'Constantine';
+            font-size: calc(25px + 45 * ((100vw - 320px) / 1920));
+            font-weight: 400;
+            line-height: calc(32px + 48 * ((100vw - 320px) / 1920));
+            text-transform: uppercase;
+            padding-right: 5px;
+            color: $dark-violet;
+        }
+
+
+        &__border {
+            //хз какой там цвет правильно - просто пока тупо ткнул пипетков в paint
+            border: 2px solid rgba(75, 11, 122, 1.0);
+            position: relative;
+
+            &:before {
+                content: "";
+                width: 160%;
+                height: 100%;
+                background-image: url('../images/first/paints.png');
+                background-size: 100% 100%;
+                position: absolute;
+                z-index: -1;
+                bottom: 8%;
+                left: -30%;
+            }
+
+            &::after {
+                content: 'Казань';
+                font-family: 'Constantine';
+                font-size: calc(11px + 33 * ((100vw - 320px) / 1920));
+                color: $dark-violet;
+                line-height: 0;
+                position: absolute;
+                top: -4%;
+                left: -0.1rem;
+            }
+        }
+    }
+
+    .socials {
+        //width: 22px;
+        @include flexy(column);
+        position: relative;
+
+        &::before {
+            content: '';
+            width: calc(47px + 138 * ((100vw - 320px) / 1920));
+            height: 1px;
+            background-color: $title-line-color;
+            position: absolute;
+            bottom: calc(140px + 230 * ((100vw - 320px) / 1920));
+            transform: rotate(90deg);
+        }
+
+        &::after {
+            content: '';
+            width: calc(47px + 138 * ((100vw - 320px) / 1920));
+            height: 1px;
+            background-color: $title-line-color;
+            position: absolute;
+            top: calc(140px + 230 * ((100vw - 320px) / 1920));
+            transform: rotate(90deg);
+        }
+
+        a {
+            display: block;
+            width: calc(20px + 38 * ((100vw - 320px) / 1920));
+            height: calc(20px + 38 * ((100vw - 320px) / 1920));
+
+            img {
+                width: calc(20px + 38 * ((100vw - 320px) / 1920));
+                height: calc(20px + 38 * ((100vw - 320px) / 1920));
+            }
+        }
+    }
+
+
+    &__left-side {
+        display: none;
+    }
+
+    &__check-in {
+        @include flexy(column);
+
+        .first__text {
+            @include fonty(14px, 400, 19px);
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .first {
+        padding: 60px 0;
+
+
+        &__wrapper {
+            padding-top: 45px;
+            @include flexy(row-reverse, space-between);
+        }
+
+        .girl {
+            //я не знаю как работает эта формула именно в этом случае: я хотел из 49% вычитать 8, но так работало плохо
+            width: calc(51% - 160 * ((100vw - 767px) / 1920));
+            margin: 0 0;
+            gap: 30px;
+            padding: 0 10px;
+
+            &__border {
+
+                &::after {
+                    bottom: 103%;
+                }
+            }
+        }
+
+        .socials {
+            gap: 13px;
+        }
+
+        &__left-side {
+            width: 28.6%;
+            @include flexy(column);
+        }
+    }
+}

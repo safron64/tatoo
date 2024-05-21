@@ -1,0 +1,261 @@
+@font-face {
+  font-family: "Manrope";
+  src:
+    url(../fonts/Manrope-Regular.woff) format("woff2"),
+    url(../fonts/Manrope-Regular.woff2) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Manrope";
+  src:
+    url(../fonts/Manrope-Medium.woff2) format("woff2"),
+    url(../fonts/Manrope-Medium.woff) format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 600;
+  /* Соответствует значению "почти" bold )) */
+  font-family: "Manrope";
+  // src: url("../fonts/Manrope-SemiBold.ttf");
+  src:
+    url(../fonts/Manrope-SemiBold.woff2) format("woff2"),
+    url(../fonts/Manrope-SemiBold.woff) format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "Constantine";
+  src:
+    url('../fonts/Constantine.woff') format("woff"),
+    url('../fonts/Constantine.woff2') format("woff2");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  min-width: 320px;
+  scroll-behavior: smooth;
+  color: $dark-purple;
+
+  @media (min-width: 1920px) {
+    font-size: 44px;
+  }
+}
+
+body {
+  max-width: 100vw;
+  height: 100%;
+  //min-width: 320px;
+  position: relative;
+  background-color: $bg-color;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
+
+button {
+  padding: 0;
+  border: none;
+}
+
+
+main {
+  padding-top: 60px;
+}
+
+picture {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  @include link-color(black, black, $purple);
+}
+
+.link {
+  @include fonty(0.8rem, 600, 1.36em);
+  text-decoration: none;
+  display: inline-block;
+  color: $purple;
+  padding: 17px 50px;
+  background-image: url('../images/bg-button.png');
+  background-size: 100% 100%;
+  // background-size: contain;
+  background-repeat: no-repeat;
+
+  @media (min-width: 768px) {
+    max-width: 388px;
+    margin: 0 auto;
+  }
+
+  @media(min-width: 320px) {
+    font-size: 14px;
+  }
+}
+
+.link__decoration {
+
+  &_increase {
+    &:hover {
+      transition-duration: 0.3s;
+      transform: scale(1.4);
+    }
+
+    &:active {
+      position: relative;
+      top: -3px;
+    }
+  }
+
+  &_underscore {
+    position: relative;
+
+    &:after {
+      background-color: $title-line-color;
+      display: block;
+      content: "";
+      height: 2px;
+      width: 0%;
+      -webkit-transition: width .3s ease-in-out;
+      -moz--transition: width .3s ease-in-out;
+      transition: width .3s ease-in-out;
+
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+  }
+
+  &_checkIn {
+    &:hover {
+      transition-duration: 0.3s;
+      transform: scale(1.2);
+    }
+
+    &:active {
+      position: relative;
+      top: -3px;
+    }
+  }
+}
+
+.none {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.title {
+  font-family: Constantine, sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: $dark;
+  text-align: center;
+  margin-bottom: 16px;
+  position: relative;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 30%;
+    height: 1px;
+    background-color: $violet;
+  }
+
+  &::before {
+    right: 0;
+    left: auto;
+  }
+
+  & span {
+    // max-width: 559px;
+    max-width: 119px;
+    padding: 0 12px;
+    display: inline-block;
+  }
+
+  @media (min-width: 1280px) {
+
+    // & {
+    //   font-size: 1.8rem;
+    // }
+    &::after,
+    &::before {
+      width: 34%;
+    }
+  }
+
+  @media (min-width: 1920px) {
+
+    // & {
+    //   font-size: 1.8rem;
+    // }
+
+    & span {
+      max-width: 559px;
+    }
+
+  }
+
+  @media (min-width: 375px) {
+    .border-line {
+      width: 23.44vw;
+    }
+
+    .services {
+      @include m(bottom, 40);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .link {
+      width: 100%;
+      font-size: 1rem;
+      display: block;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .link {
+      background-image: url("../images/bg-button-md.png");
+    }
+  }
+}

@@ -1,0 +1,252 @@
+.contacts {
+   position: relative;
+   padding-bottom: 132px;
+
+   .contact-badge {
+      @include flexy(column, space-between, flex-start);
+      gap: 15px;
+
+      .socials {
+         gap: 13px;
+      }
+   }
+
+   &__wrapper {
+      @include flexy(row, center, center);
+      flex-wrap: wrap;
+      gap: 40px;
+      padding-top: 20px;
+   }
+
+   &__info {
+      border-radius: 10px;
+      background: rgba(218, 185, 235, 0.5);
+      padding: 20px;
+      width: 229px;
+      margin: 0 auto;
+      box-shadow: 0px 0px 10px 15px rgba(197, 192, 220, 0.2);
+
+      .link__decoration_underscore {
+
+         &:after {
+            bottom: -5px;
+         }
+      }
+   }
+
+   &__atelier {
+      position: relative;
+      @include flexy(row, center, center);
+      gap: 7px;
+      padding-right: 36px;
+   }
+
+   &__atelier-title {
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+      color: #562667;
+      font-family: Constantine;
+      // @include fonty(28px, 400, 30px);
+   }
+
+   &__atelier-video {
+      position: relative;
+
+      iframe {
+         width: 229px;
+         height: 234px;
+         // background: #e3cfcf;
+      }
+   }
+
+   &__img {
+      position: absolute;
+      top: -49px;
+      left: -48px;
+      z-index: -1;
+      width: 100%;
+   }
+
+   &__img-title {
+      position: absolute;
+      top: 6px;
+      left: auto;
+      width: 100px;
+   }
+}
+
+// iframe {
+//    object-fit: cover;
+//    overflow-clip-margin: content-box;
+//    overflow: clip;
+//    border: none;
+// }
+.ndfHFb-c4YZDc-uoC0bf.ndfHFb-c4YZDc-i5oIFb .ndfHFb-c4YZDc-Wrql6b-AeOLfc-b0t70b {
+   display: none;
+}
+
+@media (min-width: 375px) {
+   .contacts {
+      &__info {
+         width: 229px;
+         margin: 0 auto;
+      }
+   }
+}
+
+@media (min-width: 768px) {
+   .contacts {
+      &__wrapper {
+         @include flexy(row, space-between, center);
+         flex-wrap: wrap;
+         gap: 40px;
+         padding-top: 20px;
+      }
+
+      &__info {
+         width: 229px;
+         margin: 0;
+      }
+
+      .contacts__img-title {
+         position: absolute;
+         top: 3px;
+         width: 168px;
+      }
+   }
+}
+
+@media (min-width: 1280px) {
+   .contacts {
+      &__wrapper {
+         @include flexy(row, space-between, center);
+         flex-wrap: wrap;
+         gap: 40px;
+         padding-top: 20px;
+         padding-left: 20px;
+      }
+
+      &__atelier-video {
+         iframe {
+            width: 450px;
+            height: 350px;
+         }
+      }
+
+      &__img {
+         width: 130%;
+         top: -88px;
+         left: -125px;
+      }
+
+      &__info {
+         padding: 30px 0 40px 25px;
+         width: 400px;
+         box-shadow: 0px 0px 12px 24px rgba(197, 192, 220, 0.2);
+      }
+
+      &__atelier {
+         gap: 23px;
+         padding-right: 0;
+      }
+
+      &__atelier-title {
+         @include fonty(40px, 400, 30px);
+      }
+
+      // conctact-badge
+      .contact-badge {
+         gap: 20px;
+
+         &__item {
+            color: #22082b;
+
+            p:first-child {
+               @include fonty(18px, 600, 19px);
+               padding-bottom: 10px;
+            }
+
+            p:nth-child(2) {
+               @include fonty(16px, 400, 14px);
+            }
+         }
+      }
+
+      .contacts__img-title {
+         position: absolute;
+         top: -3px;
+         width: 307px;
+      }
+
+      .socails__item img,
+      .socials a {
+         width: 46px;
+         height: 46px;
+      }
+   }
+}
+
+@media (min-width: 1730px) {
+   .contacts {
+      &__wrapper {
+         @include flexy(row, space-between, center);
+         flex-wrap: wrap;
+         gap: 40px;
+         padding-top: 20px;
+         padding-left: 50px;
+      }
+
+      &__atelier-video iframe {
+         width: 606px;
+         height: 450px;
+      }
+
+      &__img {
+         width: 130%;
+         top: -115px;
+         left: -206px;
+      }
+
+      &__info {
+         padding: 38px 0 38px 45px;
+         width: 557px;
+         box-shadow: 0px 0px 12px 24px rgba(197, 192, 220, 0.2);
+      }
+
+      &__atelier {
+         gap: 23px;
+         padding-right: 0;
+      }
+
+      &__atelier-title {
+         @include fonty(60px, 400, 30px);
+      }
+
+      // conctact-badge
+      .contact-badge {
+         gap: 29px;
+
+         &__item {
+            color: #22082b;
+
+            p:first-child {
+               @include fonty(22px, 600, 19px);
+               padding-bottom: 10px;
+            }
+
+            p:nth-child(2) {
+               @include fonty(18px, 400, 14px);
+            }
+         }
+      }
+
+      .contacts__img-title {
+         top: -1px;
+         width: 454px;
+      }
+   }
+}
+
+// .ndfHFb-c4YZDc .ndfHFb-c4YZDc-aTv5jf-NziyQe-Bz112c:not(:link):not(:visited) {
+//    background-image: url(/src/images/video/btn-video.png) !important;
+// }

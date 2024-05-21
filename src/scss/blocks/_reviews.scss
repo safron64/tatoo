@@ -1,0 +1,39 @@
+.reviews {
+
+    .swiper-wrapper {
+        //чтобы отодвинуть кнопки навигации
+        padding-bottom: 45px;
+
+        .pc-slide {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 767px) {
+    .reviews {
+
+        .swiper-wrapper {
+            padding-bottom: 55px;
+
+            .pc-slide {
+                display: block;
+            }
+
+            .mob-slide {
+                display: none;
+                border: $myBorder;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .reviews {
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+        }
+    }
+}

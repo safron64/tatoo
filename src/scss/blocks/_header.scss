@@ -1,0 +1,144 @@
+.header {
+	width: 100%;
+	height: 0;
+	position: fixed;
+	z-index: 2;
+	background-color: $bg-color;
+
+	&_active {
+		height: 100%;
+		background-color: $stop-scroll-color;
+	}
+
+	ul {
+		margin: 0 0;
+		padding: 0 0;
+
+		li {
+			list-style-type: none;
+		}
+	}
+
+	.nav {
+		width: 100%;
+		padding: 20px 20px;
+		background-color: $header-bg;
+		border: $header-border;
+		box-shadow: $header-shadow;
+		transform: translateY(-100vh);
+		transition: transform 0.5s;
+
+		a,
+		p {
+			color: $font-color;
+		}
+
+		&__contacts {
+			display: none;
+		}
+
+		&_active {
+			transform: translateY(0);
+			transition: transform 0.4s;
+
+			&__list {
+				width: 100%;
+				padding-bottom: 15px;
+			}
+		}
+
+		&__link {
+			@include fonty(0.875rem, 600, 1.35rem);
+		}
+	}
+}
+
+@media (min-width: 320px) {
+	.header .nav__link {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		position: fixed;
+		height: auto;
+		padding: 0;
+
+		.nav {
+			//width: 91.5%;
+			@include centry(91.5%);
+			@include flexy(row, space-between);
+			padding: 0px 0px;
+			background-color: initial;
+			border: none;
+			box-shadow: none;
+			transform: translateY(0);
+			transition: transform 0.5s;
+
+			&__list {
+				width: 100%;
+				padding: 10px 0;
+				@include flexy(row, space-between);
+			}
+
+			&__link {
+				//@include fonty(30px, 600, 41px);
+				display: inline-block;
+				font-size: calc(11px + 26 * ((100vw - 768px) / 1920));
+				position: relative;
+
+				&_active {
+					border: 3px solid #825890;
+					border-radius: 50px;
+					padding: 5px 16px;
+					position: relative;
+
+					&::after {
+						content: '';
+						position: absolute;
+						top: 100%;
+						left: 53%;
+
+						width: 38px;
+						height: 80px;
+						background-image: url('../images/header/drops.png');
+						background-size: 38px 80px;
+					}
+				}
+			}
+
+			.contact-badge {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (min-width: 930px) {
+	.header {
+
+		.nav__list {
+			width: 67.3%;
+		}
+
+		.nav__contacts {
+			display: initial;
+
+			.contact-badge__item {
+				@include flexy();
+				gap: 10px;
+
+				img {
+					position: initial;
+					width: 28px;
+					height: 28px;
+				}
+
+				span {
+					font-size: calc(13px + 20 * ((100vw - 930px) / 1920));
+				}
+			}
+		}
+	}
+}
